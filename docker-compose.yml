@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  vinnance-pg:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=vinnance_postgres
+      - POSTGRESQL_PASSWORD=a00207711d48850807ec8c781917f483
+      - POSTGRESQL_DATABASE=vinnance
