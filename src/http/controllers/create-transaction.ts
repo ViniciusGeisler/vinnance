@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
-import { makeCreateTransaction } from '@/use-cases/factories/makeCreateTransaction'
+import { makeCreateTransaction } from '@/use-cases/factories/make-create-transaction'
 
 export async function createTransaction(
   request: FastifyRequest,
@@ -10,7 +10,7 @@ export async function createTransaction(
     title: z.string(),
     is_fixed: z.boolean().default(false),
     amount_of_installments: z.number().default(0),
-    value: z.number(),
+    value: z.number().nonnegative(),
     type: z.enum(['income', 'expense']).default('expense'),
     userId: z.string(),
   })
