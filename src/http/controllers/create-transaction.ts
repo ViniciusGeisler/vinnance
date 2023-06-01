@@ -12,10 +12,9 @@ export async function createTransaction(
     amount_of_installments: z.number().default(0),
     value: z.number().nonnegative(),
     type: z.enum(['income', 'expense']).default('expense'),
-    userId: z.string(),
   })
 
-  const { title, is_fixed, amount_of_installments, value, type, userId } =
+  const { title, is_fixed, amount_of_installments, value, type } =
     transactionBodySchema.parse(request.body)
 
   const createTransactionUseCase = makeCreateTransaction()
@@ -26,7 +25,7 @@ export async function createTransaction(
     amount_of_installments,
     value,
     type,
-    userId,
+    userId: request.user.sub,
   })
 
   return reply.status(201).send({ transaction })
