@@ -8,6 +8,7 @@ API Rest construída para você conseguir ter controle de suas finanças
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [Prisma](https://github.com/prisma/prisma)
 - [PostgreSQL](https://github.com/postgres)
+- [Docker](https://github.com/docker)
 - [Vitest](https://github.com/vitest-dev/vitest)
 
 ## Funcionalidades 
