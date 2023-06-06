@@ -18,9 +18,9 @@ API Rest construída para você conseguir ter controle de suas finanças
 
 - [x] **Criar usuário**
 
-- [ ] **Autenticação dos usuários por JWT**
+- [X] **Autenticação dos usuários por JWT**
 
-- [ ] **Criar transação**
+- [X] **Criar transação**
       Por enquanto é apenas possivel criar transações únicas de Receita e Despesa
 
 - [ ] **Busca pelas transações**
